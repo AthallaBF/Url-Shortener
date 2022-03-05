@@ -1,4 +1,4 @@
-# Srl-Shortener
+# Url-Shortener
 
 ### About
 A simple Url Shortener built with Node, Express, and MongoDB
