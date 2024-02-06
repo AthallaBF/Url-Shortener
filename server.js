@@ -9,8 +9,7 @@ const port = 3000;
 app.use(express.urlencoded({ extended: true }));
 
 // connect to the database
-const uri =
-	"mongodb://athallabf:fidocakep@cluster0-shard-00-00.h5vj5.mongodb.net:27017,cluster0-shard-00-01.h5vj5.mongodb.net:27017,cluster0-shard-00-02.h5vj5.mongodb.net:27017/url-shortener?ssl=true&replicaSet=atlas-upownf-shard-0&authSource=admin&retryWrites=true&w=majority";
+const uri = process.env.DB_URL;
 mongoose.connect(uri).then(() => {
 	app.listen(process.env.PORT || port);
 	console.log("database connnected, server is now running on localhost:3000");
